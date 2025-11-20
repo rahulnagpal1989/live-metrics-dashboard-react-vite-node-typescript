@@ -1,0 +1,44 @@
+:root{
+  --bg: #0f1724;
+  --card-bg: #0b1220;
+  --muted: #94a3b8;
+  --accent: #06b6d4;
+  --green: #10b981;
+  --yellow: #f59e0b;
+  --red: #ef4444;
+  --glass: rgba(255,255,255,0.03);
+  --card-radius: 12px;
+  --gap: 12px;
+  --font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+* { box-sizing: border-box; }
+html,body,#root { width: 100%; height: 100%; margin: 0; font-family: var(--font-family); background: linear-gradient(180deg,var(--bg), #071023); color: #e6eef6; }
+
+.app {
+  padding: 20px;
+}
+
+.header {
+  display:flex; align-items:center; justify-content:space-between; margin-bottom: 18px;
+}
+.title { font-size: 20px; font-weight:700; display:flex; gap:8px; align-items:center; }
+.controls { display:flex; gap:8px; align-items:center; }
+
+.controls button {
+  background: var(--glass);
+  border: 1px solid rgba(255,255,255,0.04);
+  color: inherit;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor:pointer;
+}
+.controls input[type="number"] { width:70px; padding:6px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit; }
+
+.modal-backdrop {
+  position: fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(3,7,18,0.6);
+}
+.modal {
+  width: 720px; max-width:95%; background: var(--card-bg); padding:16px; border-radius:12px;
+}
+.modal .header { margin-bottom:12px; }

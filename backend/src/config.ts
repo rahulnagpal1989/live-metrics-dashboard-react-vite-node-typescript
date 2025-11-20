@@ -1,0 +1,1 @@
+export const EMIT_INTERVAL_MS = 1000;
